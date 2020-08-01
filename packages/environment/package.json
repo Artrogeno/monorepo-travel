@@ -1,0 +1,14 @@
+{
+  "name": "@traveler/environment",
+  "version": "1.0.0",
+  "description": "Server",
+  "author": "Arthur Silva <artrogeno@gmail.com>",
+  "license": "MIT",
+  "main": "index.ts",
+  "dependencies": {
+    "dotenv": "^8.2.0"
+  },
+  "devDependencies": {
+    "@types/dotenv": "^8.2.0"
+  }
+}
