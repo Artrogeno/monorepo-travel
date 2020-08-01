@@ -1,0 +1,29 @@
+{
+  "name": "@traveler/server",
+  "version": "1.0.0",
+  "description": "Server",
+  "author": "Arthur Silva <artrogeno@gmail.com>",
+  "license": "MIT",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon",
+    "tsc": "tsc"
+  },
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "helmet": "^3.23.3",
+    "morgan": "^1.10.0"
+  },
+  "devDependencies": {
+    "@types/body-parser": "^1.19.0",
+    "@types/cors": "^2.8.7",
+    "@types/express": "^4.17.7",
+    "@types/mongodb": "^3.5.25",
+    "@types/mongoose": "^5.7.34",
+    "nodemon": "^2.0.4",
+    "ts-node": "^8.10.2",
+    "tsconfig-paths": "^3.9.0"
+  }
+}
