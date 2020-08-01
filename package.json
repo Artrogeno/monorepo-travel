@@ -19,6 +19,7 @@
   },
   "devDependencies": {
     "@traveler/eslint": "*",
+    "@traveler/environment": "*",
     "@types/jest": "^26.0.8",
     "jest": "^26.2.2",
     "ts-jest": "^26.1.4",
