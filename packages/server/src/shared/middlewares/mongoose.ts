@@ -30,6 +30,7 @@ export default class Connection {
   public async connect() {
     try {
       const urlConnect = this.getUrlConnection()
+      console.log({ urlConnect })
       process.on('SIGINT', () => this.getDisconnect(() => process.exit(0)))
       const mongoConnection = await mongoose.connect(urlConnect, {
         useNewUrlParser: true,
