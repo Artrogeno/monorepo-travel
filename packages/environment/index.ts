@@ -10,7 +10,11 @@ const env: ConfigI = {
   MASTER_KEY: process.env.MASTER_KEY || '',
   MONGO_USERNAME: process.env.MONGO_USERNAME || 'traveler',
   MONGO_PASSWORD: process.env.MONGO_PASSWORD || 'artrogeno',
+  MONGO_HOST: process.env.MONGO_HOST || 'localhost',
   MONGO_PORT: Number(process.env.MONGO_PORT) || 27018,
+  MONGO_DBNAME: process.env.MONGO_DBNAME || 'traveler',
+  MONGO_AUTH_SRC: process.env.MONGO_AUTH_SRC || 'traveler',
+  MONGO_AUTH: Number(process.env.MONGO_AUTH) || 0,
 }
 
 export { env }
