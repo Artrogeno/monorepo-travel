@@ -11,7 +11,9 @@ npm-debug.*
 *.mobileprovision
 *.orig.*
 web-build/
-
+report.[0-9]*.[0-9]*.[0-9]*.[0-9]*.json
+.env
+.yarn-integrity
 yarn.lock
 
 # macOS

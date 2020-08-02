@@ -1,0 +1,22 @@
+export default {
+  title: 'light',
+  colors: {
+    primaty: '#9013FE',
+    secondary: '#333333',
+    success: '#4AAF05',
+    danger: '#FF5756',
+    warning: '#FB8832',
+    info: '#007AFF',
+    light: '#EFF7FF',
+    dark: '#333333',
+    white: '#ffffff',
+    black: '#000000',
+    bg_body: '#EFF7FF',
+    fg_body: '#333333',
+    theme_100: '#333333',
+    theme_200: '#666666',
+    theme_300: '#9C9C9C',
+    theme_400: '#E5E5E5',
+    theme_500: '#EFF7FF',
+  },
+}
