@@ -12,16 +12,23 @@
   "author": "Arthur Silva <artrogeno@gmail.com>",
   "license": "MIT",
   "private": true,
+  "scripts": {
+    "server": "lerna run start --scope=@traveler/server",
+    "docker": "bash ./scripts/docker.sh",
+    "new-version": "lerna version --conventional-commits --yes",
+    "diff": "lerna diff"
+  },
   "workspaces": {
     "packages": [
       "packages/*"
     ]
   },
   "devDependencies": {
-    "@traveler/eslint": "*",
     "@traveler/environment": "*",
+    "@traveler/eslint": "*",
     "@types/jest": "^26.0.8",
     "jest": "^26.2.2",
+    "lerna": "^3.22.1",
     "ts-jest": "^26.1.4",
     "typescript": "^3.9.7"
   }
