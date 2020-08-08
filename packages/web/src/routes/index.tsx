@@ -1,17 +1,19 @@
 import React from 'react'
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
+import { Switch, Route } from 'react-router-dom'
 
 import Main from '../pages/Main'
+import Map from '../pages/Map'
 
 const Routes: React.FC = () => {
   return (
-    <Router>
-      <Switch>
-        <Route exact path="/">
-          <Main />
-        </Route>
-      </Switch>
-    </Router>
+    <Switch>
+      <Route exact path="/">
+        <Main />
+      </Route>
+      <Route path="/map">
+        <Map />
+      </Route>
+    </Switch>
   )
 }
 
