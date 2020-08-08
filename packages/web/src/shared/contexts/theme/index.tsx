@@ -1,18 +1,19 @@
-import React from "react";
-import { ThemeProvider, DefaultTheme } from "styled-components";
+import React from 'react'
+import { ThemeProvider, DefaultTheme } from 'styled-components'
 
-import { useStore } from "../../hooks";
-import GlobalStyle from "../../styles/global";
-import dark from "../../styles/themes/dark";
+import { useStore } from '../../hooks'
+import { THEME } from '../../constants/storage'
+import GlobalStyle from '../../styles/global'
+import dark from '../../styles/themes/dark'
 
-export const ThemeContext = React.createContext<any>([]);
+export const ThemeContext = React.createContext<any>([])
 
 interface PropsI {
-  children: React.ReactNode;
+  children: React.ReactNode
 }
 
 const Provider: React.FC<PropsI> = ({ children }) => {
-  const [theme, setTheme] = useStore<DefaultTheme>("theme", dark);
+  const [theme, setTheme] = useStore<DefaultTheme>(THEME, dark)
   return (
     <ThemeContext.Provider value={[theme, setTheme]}>
       <ThemeProvider theme={theme}>
@@ -20,7 +21,7 @@ const Provider: React.FC<PropsI> = ({ children }) => {
         {children}
       </ThemeProvider>
     </ThemeContext.Provider>
-  );
-};
+  )
+}
 
-export default Provider;
+export default Provider
