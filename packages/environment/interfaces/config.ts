@@ -1,6 +1,7 @@
 export interface ConfigI {
-  NODE_PORT: number | string
   NODE_ENV: string
+  NODE_PORT: number | string
+  NODE_HOST?: string
   JWT_SECRET?: string
   MASTER_KEY?: string
   MONGO_USERNAME?: string
