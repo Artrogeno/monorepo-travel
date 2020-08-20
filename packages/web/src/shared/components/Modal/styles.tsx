@@ -36,9 +36,6 @@ export const Container = styled.section`
   &.open {
     z-index: 100;
   }
-  /*
-  &.close {
-  } */
 `
 
 export const Overlay = styled.div`

@@ -20,15 +20,21 @@ const Menu = () => {
           </NavLink>
         </Item>
         <Item>
-          <NavLink to="/analytics">
-            <Icon icon={['fas', 'signal']} />
-            <Label>Analytics</Label>
+          <NavLink to="/timeline">
+            <Icon icon={['fas', 'layer-group']} />
+            <Label>Timeline</Label>
           </NavLink>
         </Item>
         <Item>
           <NavLink to="/map">
             <Icon icon={['fas', 'map-marked-alt']} />
             <Label>Map</Label>
+          </NavLink>
+        </Item>
+        <Item>
+          <NavLink to="/components">
+            <Icon icon={['fab', 'uikit']} />
+            <Label>Components</Label>
           </NavLink>
         </Item>
         <Item>

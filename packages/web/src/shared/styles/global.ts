@@ -55,6 +55,7 @@ export default createGlobalStyle`
     transition: background .6s ease-in-out, color .6s ease-in-out;
     background: ${props => props.theme.backgrounds.body};
     color: ${props => props.theme.colors.body};
+    overflow-x: hidden;
     &.no-scroll {
       overflow: hidden;
     }

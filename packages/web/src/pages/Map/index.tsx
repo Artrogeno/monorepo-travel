@@ -1,5 +1,6 @@
-import React, { useState, useEffect, useContext } from 'react'
+import React, { useState, useEffect, useContext, useRef } from 'react'
 import ReactMapGL from 'react-map-gl'
+// import * as Geocoder from 'react-map-gl-geocoder'
 
 import { ThemeContext } from '../../shared/contexts/theme'
 import { EntryI } from '../../shared/interfaces/entry'
@@ -21,6 +22,7 @@ const Map = () => {
     longitude: -95.665,
     zoom: 4,
   })
+  const mapRef = useRef(null)
 
   const addMarker = (event: any) => {
     const [longitude, latitude] = event.lngLat
@@ -32,6 +34,19 @@ const Map = () => {
     const entries = await listEntries()
     setEntries(entries)
   }
+
+  // const handleViewportChange = (viewPort: any) => {
+  //   setViewport(viewPort)
+  // }
+
+  // const handleGeocoderViewportChange = (viewPort: any) => {
+  //   const geocoderDefaultOverrides = { transitionDuration: 1000 }
+
+  //   return handleViewportChange({
+  //     ...viewPort,
+  //     ...geocoderDefaultOverrides,
+  //   })
+  // }
 
   useEffect(() => {
     getEntries()
@@ -45,11 +60,19 @@ const Map = () => {
     <Container>
       <ReactMapGL
         {...viewport}
+        ref={mapRef}
         mapStyle={theme.maps}
         mapboxApiAccessToken={process.env.REACT_APP_MAPBOX_TOKEN}
         onViewportChange={nextViewport => setViewport(nextViewport)}
         onDblClick={addMarker}
       >
+        {/* <Geocoder
+          mapRef={mapRef}
+          onViewportChange={handleGeocoderViewportChange}
+          mapboxApiAccessToken={process.env.REACT_APP_MAPBOX_TOKEN}
+          position="top-left"
+        /> */}
+
         <PopupContext>
           {entries.map(entry => (
             <Marker

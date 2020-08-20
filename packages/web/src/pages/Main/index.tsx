@@ -1,24 +1,31 @@
-import React, { useState } from 'react'
+import React from 'react'
 
-import MeetingModal from './components/MeetingModal'
-import { Container, Title } from './styles'
+import Button from '../../shared/components/Button'
+import {
+  Container,
+  Card,
+  CardHeader,
+  CardBody,
+  Title,
+  Subtitle,
+  Icon,
+} from './styles'
 
 const Main = () => {
-  const [closeModal, setCloseModal] = useState<boolean>(true)
   return (
     <Container>
-      <Title>
-        Artrogeno React/Typescript
-        <br />
-        <button onClick={() => setCloseModal(prevState => !prevState)}>
-          Modal
-        </button>
-      </Title>
-
-      <MeetingModal
-        openModal={closeModal}
-        close={() => setCloseModal(prevState => !prevState)}
-      />
+      <Card>
+        <CardHeader>
+          <Title>Traveler</Title>
+          <Subtitle>Share your experiences.</Subtitle>
+        </CardHeader>
+        <CardBody>
+          <Button link to="/timeline" color="success" size="md" shadow>
+            Explore
+            <Icon icon={['fas', 'layer-group']} />
+          </Button>
+        </CardBody>
+      </Card>
     </Container>
   )
 }
