@@ -40,6 +40,8 @@
     "react-dom": "^16.13.1",
     "react-hook-form": "^6.3.0",
     "react-map-gl": "^5.2.7",
+    "react-map-gl-geocoder": "^2.0.13",
+    "react-multi-carousel": "^2.5.5",
     "react-router-dom": "^5.2.0",
     "react-scripts": "3.4.1",
     "react-switch": "^5.0.1",
